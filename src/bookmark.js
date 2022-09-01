@@ -60,6 +60,7 @@ const controlBar = document.createElement('div')
 controlBar.style.position = 'fixed';
 controlBar.style.top = '0px';
 controlBar.style.left = '0px';
+controlBar.style.zIndex = '999999';
 controlBar.appendChild(videoIndicator)  
 controlBar.appendChild(toggle)  
 
