@@ -8,7 +8,7 @@ function defaultTask(cb) {
   src('src/bookmark.js')
   .pipe(bookmarkify())
   .pipe(rename({ suffix: '.min'}))
-  .pipe(dest('dist'))
+  .pipe(dest('docs'))
   cb();
 }
 
@@ -16,9 +16,7 @@ function bundle(cb) {
   src('src/*.js')
   .pipe(concat('bundle.min.js'))
   .pipe(uglify())
-  // .pipe(rename({ suffix: '.min'}))
   .pipe(dest('docs')) 
-
   cb();
 }
 
